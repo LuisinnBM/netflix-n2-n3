@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4) 90%, transparent);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.navbar a.active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #e50914;
+  font-size: 1.75rem;
+  margin: 0;
+  line-height: 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profile-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.bell-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bell-btn img {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.banner {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://image.tmdb.org/t/p/original/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg') no-repeat center/cover;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 5rem 4rem;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 20, 20, 1) 15%, rgba(20, 20, 20, 0.1) 70%);
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.banner-buttons button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.banner-buttons .btn-play {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner-buttons .btn-info {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+}
+
+
+.container {
+  padding: 2rem 3rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.suggestion-form {
+  background-color: #1f1f1f;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.suggestion-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.suggestion-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.suggestion-form input,
+.suggestion-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.suggestion-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.suggestion-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  background-color: #e50914;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.suggestion-form button:hover {
+  background-color: #f40612;
+}
